@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestor de Divulgação Pessoal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      animation: gradiente 15s ease infinite;
+      background-size: 400% 400%;
+      background-image: linear-gradient(-45deg, #4f46e5, #06b6d4, #10b981, #f59e0b);
+    }
+
+    @keyframes gradiente {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .botao-personalizado {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .botao-personalizado:hover {
+      transform: scale(1.05);
+      background-color: #1D4ED8;
+      color: white;
+      box-shadow: 0px 4px 15px rgba(29, 78, 216, 0.3);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .video-thumbnail:hover img {
+      transform: scale(1.03);
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 12px;
+      border-radius: 50%;
+    }
+
+    section {
+      transition: background 0.5s ease;
+    }
+
+    footer {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Vídeo com Thumbnail -->
+  <section class="text-center py-12 px-4">
+    <h2 class="text-3xl font-bold mb-6 drop-shadow-lg">Veja como funciona o serviço</h2>
+    <div class="max-w-2xl mx-auto video-thumbnail">
+      <a href="https://www.youtube.com/watch?v=SEU_VIDEO_ID" target="_blank">
+        <img src="https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg" alt="Thumbnail do vídeo">
+        <div class="play-icon">▶</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section class="py-12 px-4 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-10 drop-shadow-lg">Escolha Seu Plano</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Plano Iniciante -->
+      <div class="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg">
+        <h4 class="text-xl font-bold mb-2">Plano Iniciante</h4>
+        <p class="text-gray-100 mb-4">Para quem está começando. Você recebe artes básicas e textos para divulgar seus produtos no WhatsApp.</p>
+        <p class="text-2xl font-semibold mb-4">R$ 49,90</p>
+        <a href="#" class="botao-personalizado bg-white text-blue-600 block text-center">Contratar</a>
+      </div>
+
+      <!-- Plano Profissional -->
+      <div class="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg">
+        <h4 class="text-xl font-bold mb-2">Plano Profissional</h4>
+        <p class="text-gray-100 mb-4">Artes mais atrativas, textos prontos de alto impacto e suporte direto para você vender todos os dias.</p>
+        <p class="text-2xl font-semibold mb-4">R$ 99,90</p>
+        <a href="#" class="botao-personalizado bg-white text-blue-600 block text-center">Contratar</a>
+      </div>
+
+      <!-- Plano Turbo -->
+      <div class="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg">
+        <h4 class="text-xl font-bold mb-2">Plano Turbo</h4>
+        <p class="text-gray-100 mb-4">Divulgação completa com acompanhamento, criação estratégica de conteúdo e atendimento diferenciado.</p>
+        <p class="text-2xl font-semibold mb-4">R$ 149,90</p>
+        <a href="#" class="botao-personalizado bg-white text-blue-600 block text-center">Contratar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-sm text-white mt-10">
+    &copy; 2025 Midia Turbo - Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
