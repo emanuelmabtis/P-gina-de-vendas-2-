@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MidiaPro Divulga - Planos Profissionais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #004d40, #1de9b6);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 30px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .countdown-container {
+      background-color: #004d40;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { background-color: #004d40; }
+      50% { background-color: #00796b; }
+    }
+    .video-section {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .video-section iframe {
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+    }
+    .planos {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .plano {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+    .plano:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+    .plano h2 {
+      margin-bottom: 10px;
+    }
+    .btn {
+      margin-top: 15px;
+      display: inline-block;
+      background-color: #00e676;
+      color: #004d40;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #69f0ae;
+      transform: scale(1.1);
+    }
+    .testimonial {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 700px;
+      border-radius: 20px;
+      font-style: italic;
+    }
+    .footer {
+      background-color: #00251a;
+      padding: 25px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .login-link {
+      display: block;
+      margin: 20px auto;
+      background: #1de9b6;
+      color: #004d40;
+      padding: 10px 20px;
+      width: fit-content;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+    @media (max-width: 768px) {
+      .plano {
+        font-size: 14px;
+      }
+      .btn {
+        font-size: 14px;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="countdown-container">
+    Promoção termina em: <span id="timer">01:00</span>
+  </div>  <header>
+    <h1>MidiaPro - Seu crescimento começa aqui!</h1>
+  </header>  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/ODQN4kEsX2E" frameborder="0" allowfullscreen></iframe>
+  </div>  <div class="planos">
+    <div class="plano">
+      <h2>Plano Iniciante - R$ 100</h2>
+      <p>Comece sua jornada com o essencial para crescer online.</p>
+      <a href="https://wa.me/5571984396895?text=Quero%20o%20plano%20iniciante!" class="btn">ADQUIRIR PLANO</a>
+    </div>
+    <div class="plano">
+      <h2>Plano Intermediário - R$ 130</h2>
+      <p>Alcance mais pessoas com uma estratégia poderosa.</p>
+      <a href="https://wa.me/5571984396895?text=Quero%20o%20plano%20intermediário!" class="btn">ADQUIRIR PLANO</a>
+    </div>
+    <div class="plano">
+      <h2>Plano Avançado - R$ 160</h2>
+      <p>Domine seu mercado com a divulgação completa.</p>
+      <a href="https://wa.me/5571984396895?text=Quero%20o%20plano%20avançado!" class="btn">ADQUIRIR PLANO</a>
+    </div>
+  </div>  <div class="testimonial">
+    "Já tive resultados incríveis! Atendimento top e resultado rápido. Super recomendo!"<br />- Cliente Satisfeito
+  </div><a href="login.html" class="login-link">Já tem conta? Faça login</a>
+
+  <div class="footer">
+    Suporte via WhatsApp: <a href="https://wa.me/5571984396895" style="color: #1de9b6">Clique aqui</a><br />
+    &copy; 2025 MidiaPro. Todos os direitos reservados.
+  </div>  <script>
+    let timeLeft = 60;
+    const timerElement = document.getElementById("timer");
+    const countdown = setInterval(() => {
+      timeLeft--;
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        timerElement.textContent = "Tempo Esgotado!";
+      }
+    }, 1000);
+  </script></body>
+</html>
