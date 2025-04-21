@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Divulgação Pessoal | Midia Turbo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilo personalizado para os botões */
+    .botao-personalizado {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    /* Efeito de transição para o hover */
+    .botao-personalizado:hover {
+      transform: scale(1.05);
+      background-color: #1D4ED8; /* Mudando para uma cor mais intensa */
+      color: white;
+      box-shadow: 0px 4px 15px rgba(29, 78, 216, 0.3);
+    }
+
+    /* Efeito para quando o botão está ativo (clicado) */
+    .botao-personalizado:active {
+      transform: scale(0.98);
+      box-shadow: none;
+    }
+
+    /* Estilo da Thumbnail do Vídeo */
+    .video-thumbnail {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .video-thumbnail img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 12px;
+      border-radius: 50%;
+    }
+
+    /* Estilo do vídeo em si */
+    .video-embed {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">Midia Turbo</h1>
+    <nav>
+      <a href="/login.html" class="text-sm px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Login</a>
+      <a href="/cadastro.html" class="text-sm px-4 py-2 ml-2 bg-green-500 text-white rounded hover:bg-green-600">Cadastrar</a>
+    </nav>
+  </header>
+
+  <!-- Seção de Apresentação -->
+  <section class="bg-blue-50 text-center py-10 px-6">
+    <h2 class="text-3xl font-bold mb-4">Potencialize Suas Vendas com o Gestor de Divulgação Pessoal</h2>
+    <p class="mb-6 text-lg text-gray-600">Com nossos serviços, você tem acesso a artes personalizadas, textos e suporte para divulgar seus produtos de maneira eficaz no WhatsApp e nas redes sociais.</p>
+    <a href="/planos.html" class="botao-personalizado bg-blue-600 text-white hover:bg-blue-700">Confira os Planos e Comece Agora</a>
+  </section>
+
+  <!-- Vídeo com Thumbnail -->
+  <section class="video-embed text-center">
+    <h3 class="text-2xl font-semibold mb-6">Veja Como Funciona o Nosso Serviço</h3>
+    <div class="video-thumbnail">
+      <a href="https://www.youtube.com/watch?v=SEU_VIDEO_ID" target="_blank">
+        <img src="https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg" alt="Thumbnail do vídeo">
+        <div class="play-icon">▶</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section class="py-10 px-4 max-w-6xl mx-auto">
+    <h3 class="text-2xl font-semibold text-center mb-6">Nossos Planos de Divulgação Pessoal</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Plano Básico -->
+      <div class="bg-white p-6 rounded shadow-md">
+        <h4 class="font-bold text-lg">Plano Básico</h4>
+        <p class="text-sm text-gray-600 mt-2">Ideal para quem está começando. Inclui arte simples e texto para postagem nas redes.</p>
+        <p class="text-xl font-semibold mt-4">R$ 99,99</p>
+        <p class="text-sm text-gray-500 mt-2">Pagamento via **Pix** ou **Mercado Pago**. Após o pagamento, saldo liberado para usar em outras postagens.</p>
+        <a href="/comprar.html" class="botao-personalizado bg-blue-600 text-white hover:bg-blue-700 mt-4 block">Contratar Agora</a>
+      </div>
+      <!-- Plano Profissional -->
+      <div class="bg-white p-6 rounded shadow-md">
+        <h4 class="font-bold text-lg">Plano Profissional</h4>
+        <p class="text-sm text-gray-600 mt-2">Para quem já tem experiência e deseja mais personalização nas postagens, com suporte dedicado.</p>
+        <p class="text-xl font-semibold mt-4">R$ 199,99</p>
+        <p class="text-sm text-gray-500 mt-2">Pagamento via **Pix** ou **Mercado Pago**. Saldo liberado após pagamento.</p>
+        <a href="/comprar.html" class="botao-personalizado bg-blue-600 text-white hover:bg-blue-700 mt-4 block">Contratar Agora</a>
+      </div>
+      <!-- Plano Premium -->
+      <div class="bg-white p-6 rounded shadow-md">
+        <h4 class="font-bold text-lg">Plano Premium</h4>
+        <p class="text-sm text-gray-600 mt-2">O pacote completo com consultoria personalizada, postagens com artes exclusivas e texto de alta conversão.</p>
+        <p class="text-xl font-semibold mt-4">R$ 299,99</p>
+        <p class="text-sm text-gray-500 mt-2">Pagamento via **Pix** ou **Mercado Pago**. Saldo liberado automaticamente para contratar mais serviços.</p>
+        <a href="/comprar.html" class="botao-personalizado bg-blue-600 text-white hover:bg-blue-700 mt-4 block">Contratar Agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Funciona -->
+  <section class="bg-gray-200 py-10 px-4">
+    <h3 class="text-2xl font-semibold text-center mb-6">Como Funciona?</h3>
+    <div class="max-w-4xl mx-auto space-y-4 text-center">
+      <p>1. Escolha o plano que melhor se adapta às suas necessidades de divulgação.</p>
+      <p>2. Faça o pagamento via **Pix** ou **Mercado Pago**.</p>
+      <p>3. Após o pagamento, o saldo será automaticamente creditado em sua conta.</p>
+      <p>4. Use o saldo para contratar os serviços de criação de artes, textos e suporte de divulgação.</p>
+      <p>5. Melhore suas vendas e aumente seu engajamento com nossa ajuda especializada!</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-white text-center py-6 mt-10 border-t">
+    <p class="text-sm text-gray-500">&copy; 2025 Midia Turbo. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
