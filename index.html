@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Divulgação Pessoal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(-45deg, #0ea5e9, #6366f1, #9333ea, #f59e0b);
+      background-size: 400% 400%;
+      animation: gradiente 15s ease infinite;
+    }@keyframes gradiente {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.botao-personalizado {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #1d4ed8;
+}
+
+.botao-personalizado:hover {
+  transform: scale(1.05);
+  background-color: #1d4ed8;
+  color: white;
+}
+
+  </style>
+</head>
+<body class="text-white">  <!-- Header com vídeo -->  <section class="text-center py-16 px-4 fade-in">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-8 drop-shadow-xl">Descubra o poder da Divulgação Pessoal</h1>
+    <div class="max-w-3xl mx-auto video-thumbnail relative">
+      <a href="https://www.youtube.com/watch?v=ODQN4kEsX2E" target="_blank">
+        <img src="https://img.youtube.com/vi/ODQN4kEsX2E/maxresdefault.jpg" alt="Thumbnail do vídeo" class="rounded-xl shadow-lg">
+        <div class="play-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl bg-black bg-opacity-60 p-4 rounded-full">▶</div>
+      </a>
+    </div>
+  </section>  <!-- Seção de Planos -->  <section id="planos" class="py-20 px-6 max-w-7xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold text-center mb-16 drop-shadow-lg">Escolha Seu Plano</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10"><div class="glass p-8 text-center">
+    <h3 class="text-2xl font-bold mb-3">Plano Iniciante</h3>
+    <p class="mb-4">Artes básicas + textos prontos para WhatsApp. Ideal para quem está começando.</p>
+    <p class="text-3xl font-bold mb-4">R$ 49,90</p>
+    <a href="https://wa.me/SEUNUMERO" target="_blank" class="botao-personalizado inline-block">Contratar</a>
+  </div>
+
+  <div class="glass p-8 text-center border-4 border-white">
+    <h3 class="text-2xl font-bold mb-3">Plano Profissional</h3>
+    <p class="mb-4">Artes atrativas + suporte + textos persuasivos. Perfeito para vendedores consistentes.</p>
+    <p class="text-3xl font-bold mb-4">R$ 99,90</p>
+    <a href="https://wa.me/SEUNUMERO" target="_blank" class="botao-personalizado inline-block">Contratar</a>
+  </div>
+
+  <div class="glass p-8 text-center">
+    <h3 class="text-2xl font-bold mb-3">Plano Turbo</h3>
+    <p class="mb-4">Conteúdo estratégico + acompanhamento + atendimento completo.</p>
+    <p class="text-3xl font-bold mb-4">R$ 149,90</p>
+    <a href="https://wa.me/SEUNUMERO" target="_blank" class="botao-personalizado inline-block">Contratar</a>
+  </div>
+
+</div>
+
+  </section>  <!-- Botão flutuante WhatsApp -->  <a href="https://wa.me/SEUNUMERO" class="fixed bottom-6 right-6 z-50" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" class="w-12 h-12">
+  </a>  <!-- Rodapé -->  <footer class="mt-20 py-6 text-center text-sm bg-white bg-opacity-10 backdrop-blur-md">
+    &copy; 2025 Midia Turbo - Todos os direitos reservados.
+  </footer></body>
+</html>
